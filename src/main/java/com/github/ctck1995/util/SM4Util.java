@@ -116,7 +116,7 @@ public class SM4Util {
                 charset = ENCODING;
             }
             byte[] srcData = paramStr.getBytes(charset);
-            return Base64.encodeBase64String(encrypt_Ecb_Padding(keyData, srcData));
+            return Base64.encodeBase64URLSafeString(encrypt_Ecb_Padding(keyData, srcData));
         }
         return null;
     }
